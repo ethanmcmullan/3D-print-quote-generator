@@ -1,0 +1,83 @@
+currency: USD
+
+policies:
+  overhead_pct: 0.30
+  margin_pct: 0.35
+  expedite_multiplier_default: 1.00
+  outside_services_markup_pct: 0.15
+  # volume discount: up to 20% off unit price for duplicates
+  volume_discounts:
+    - min_qty: 1
+      unit_discount_pct: 0.00
+    - min_qty: 2
+      unit_discount_pct: 0.05
+    - min_qty: 5
+      unit_discount_pct: 0.10
+    - min_qty: 10
+      unit_discount_pct: 0.15
+    - min_qty: 20
+      unit_discount_pct: 0.20
+
+printers:
+  Viper Si2:
+    build_volume_in:
+      x: 10.0
+      y: 10.0
+      z: 10.0
+    materials:
+      - Accura Xtreme White
+      - Somos Watershed Black
+  Form 4:
+    build_volume_in:
+      x: 7.9
+      y: 4.9
+      z: 8.3
+    materials:
+      - Silicone 40A
+      - Elastic 50A
+      - Clear
+      - Grey
+      - Rigid 10K
+
+rates:
+  machine_rate_per_hr:
+    Viper Si2: 40.0
+    Form 4: 25.0
+    GENERIC_SLA: 20.0
+  labor_rate_per_hr:
+    operator: 45.0
+    qc: 65.0
+    docs: 55.0
+
+materials:
+  resins:
+    Accura Xtreme White:
+      cost_per_ml: 0.35
+      waste_pct: 0.22
+    Somos Watershed Black:
+      cost_per_ml: 0.38
+      waste_pct: 0.22
+    Silicone 40A:
+      cost_per_ml: 0.60
+      waste_pct: 0.25
+    Elastic 50A:
+      cost_per_ml: 0.55
+      waste_pct: 0.25
+    Clear:
+      cost_per_ml: 0.30
+      waste_pct: 0.20
+    Grey:
+      cost_per_ml: 0.28
+      waste_pct: 0.20
+    Rigid 10K:
+      cost_per_ml: 0.32
+      waste_pct: 0.22
+
+standards:
+  setup_minutes_per_job: 20
+  wash_cure_minutes_per_part: 3
+  support_removal_minutes_per_part: 6
+  finishing_minutes_per_part: 5
+  packaging_minutes_per_part: 2
+  docs_minutes_per_job: 20
+  inspection_minutes_per_job: 30

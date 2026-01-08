@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sla-quote"
+version = "0.1.0"
+description = "SLA 3D printing quote automation: JSON in -> PDF + XLSX out"
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic>=2.0",
+  "PyYAML>=6.0",
+  "openpyxl>=3.1",
+  "reportlab>=4.0",
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.scripts]
+sla-quote = "sla_quote.cli:main"

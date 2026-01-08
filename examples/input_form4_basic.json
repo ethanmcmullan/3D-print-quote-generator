@@ -1,0 +1,22 @@
+{
+  "quote_id": "DEMO-001",
+  "customer": { "name": "Acme R&D", "email": "buyer@acme.com" },
+  "part": { "name": "Valve Prototype", "part_number": "VP-01", "revision": "A" },
+  "process": {
+    "printer": "Form 4",
+    "resin": "Grey",
+    "part_volume_ml": 18.5,
+    "qty": 2,
+    "print_hours": 6.0
+  },
+  "options": {
+    "wash_cure": true,
+    "support_removal": true,
+    "finishing": true,
+    "packaging": true,
+    "docs_packet": false,
+    "inspection": false,
+    "expedite_multiplier": 1.0
+  },
+  "outside_services": []
+}
